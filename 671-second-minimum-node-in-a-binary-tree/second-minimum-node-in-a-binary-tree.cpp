@@ -21,11 +21,12 @@ public:
     int findSecondMinimumValue(TreeNode* root) {
         vector<int>v;
         inorder(root,v);
-        set<int>s;
-        for(int i=0;i<v.size();i++)
-        {
-            s.insert(v[i]);
-        }
+        set<int>s(v.begin(),v.end());
+        // for(int i=0;i<v.size();i++)
+        // {
+        //     s.insert(v[i]);
+        // }
+
         vector<int>v1;
         for(auto it:s)
         {
