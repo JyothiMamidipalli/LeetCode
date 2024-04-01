@@ -1,7 +1,9 @@
 class Solution {
 public:
     int lengthOfLastWord(string s) {
-                int size=s.size()-1;
+        ios_base::sync_with_stdio(0);
+        cin.tie(nullptr);
+        int size=s.size()-1;
         int x=0;
 
         while(size>=0)
