@@ -3,24 +3,27 @@ public:
     vector<int> findMissingAndRepeatedValues(vector<vector<int>>& grid) {
         ios_base::sync_with_stdio(0);
         cin.tie(nullptr);
-        vector<int>jyo;
-        map<int,int>raj;
+        int a=grid.size()*grid.size();
+        vector<int>jyo(a+1,0);
         for(int i=0;i<grid.size();i++)
         {
             for(int j=0;j<grid.size();j++)
             {
-                raj[grid[i][j]]++;
+                jyo[grid[i][j]]++;
             }
         }
-        for(auto it:raj)
+        int b,c;
+        for(int i=1;i<=a;i++)
         {
-            if(it.second==2) jyo.push_back(it.first);
+            if(jyo[i]==2) 
+            {
+                b=i;
+            }
+            if(jyo[i]==0) 
+            {
+                c=i;
+            }
         }
-        int n=grid.size()*grid.size();
-        for(int i=1;i<=n;i++)
-        {
-            if(raj[i]==0) jyo.push_back(i);
-        }
-        return jyo;
+        return {b,c};
     }
 };
