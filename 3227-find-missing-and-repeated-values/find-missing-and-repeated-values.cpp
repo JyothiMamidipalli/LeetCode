@@ -1,6 +1,8 @@
 class Solution {
 public:
     vector<int> findMissingAndRepeatedValues(vector<vector<int>>& grid) {
+        ios_base::sync_with_stdio(0);
+        cin.tie(nullptr);
         vector<int>jyo;
         map<int,int>raj;
         for(int i=0;i<grid.size();i++)
